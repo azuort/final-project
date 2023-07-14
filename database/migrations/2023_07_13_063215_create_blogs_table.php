@@ -22,6 +22,7 @@ return new class extends Migration
             $table->integer('views')->default(0);
             $table->integer('likes')->default(0);
             $table->integer('dislike')->default(0);
+            $table->string('status')->default('active');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();

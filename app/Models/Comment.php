@@ -10,7 +10,8 @@ class Comment extends Model
     use HasFactory;
 
     protected $fillable = [
-        'content'
+        'content',
+        'status'
     ];
 
     public function userComments() {

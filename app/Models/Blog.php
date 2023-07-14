@@ -13,7 +13,8 @@ class Blog extends Model
         'title',
         'content',
         'category',
-        'image_url'
+        'image_url',
+        'status'
     ];
 
     public function userBlog() {

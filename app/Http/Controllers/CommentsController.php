@@ -49,9 +49,9 @@ class CommentsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
-    {
-        //
+    public function edit(string $id) {
+        $comment = Comment::findOrFail($id);
+        return view('',['data' => $comment]);
     }
 
     /**
@@ -67,7 +67,9 @@ class CommentsController extends Controller
      * Remove the specified resource from storage.
      */
     public function destroy(string $id) {
-        $comment = Comment::destroy($id);
-        return "Comment successfully deleted.";
+        $comment = Comment::findOrFail($id);
+        $comment->status = 'inactive';
+        $comment->save();
+        return redirect('');
     }
 }

@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('content',1000);
             $table->timestamp('c_created_at');
             $table->timestamp('c_updated_at')->nullable();
+            $table->string('status')->default('active');
             $table->unsignedBigInteger('blog_id');
             $table->foreign('blog_id')->references('id')->on('blogs');
             $table->unsignedBigInteger('user_id');

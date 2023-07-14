@@ -23,7 +23,8 @@ class User extends Authenticatable
         'password',
         'first_name',
         'last_name',
-        'profile_pic'
+        'profile_pic',
+        'status'
     ];
 
     public function blog() {

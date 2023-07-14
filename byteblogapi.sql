@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 14, 2023 at 12:37 AM
+-- Generation Time: Jul 15, 2023 at 12:25 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -38,6 +38,7 @@ CREATE TABLE `blogs` (
   `views` int(11) NOT NULL DEFAULT 0,
   `likes` int(11) NOT NULL DEFAULT 0,
   `dislike` int(11) NOT NULL DEFAULT 0,
+  `status` varchar(255) NOT NULL DEFAULT 'active',
   `user_id` bigint(20) UNSIGNED NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -54,6 +55,7 @@ CREATE TABLE `comments` (
   `content` varchar(1000) NOT NULL,
   `c_created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `c_updated_at` timestamp NULL DEFAULT NULL,
+  `status` varchar(255) NOT NULL DEFAULT 'active',
   `blog_id` bigint(20) UNSIGNED NOT NULL,
   `user_id` bigint(20) UNSIGNED NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -146,6 +148,7 @@ CREATE TABLE `users` (
   `first_name` varchar(20) NOT NULL,
   `last_name` varchar(20) NOT NULL,
   `profile_pic` varchar(255) NOT NULL,
+  `status` varchar(255) NOT NULL DEFAULT 'active',
   `remember_token` varchar(100) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
