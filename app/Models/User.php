@@ -24,7 +24,9 @@ class User extends Authenticatable
         'first_name',
         'last_name',
         'profile_pic',
-        'status'
+        'status',
+        'created_at',
+        'updated_at'
     ];
 
     public function blog() {
