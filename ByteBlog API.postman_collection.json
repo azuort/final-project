@@ -7,480 +7,563 @@
 	},
 	"item": [
 		{
-			"name": "New Folder",
-			"item": []
-		},
-		{
-			"name": "GET Users",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "localhost:8000/api/users",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"users"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "GET Posts/Blogs",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "localhost:8000/api/blogs",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"blogs"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "GET Comments",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "localhost:8000/api/comments",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"comments"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "STORE Users",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"username\": \"rrurrik\",\r\n    \"email\": \"rurik@hotmail.com\",\r\n    \"password\": \"NoMeAcuerdo3210\",\r\n    \"first_name\": \"Rodrigo\",\r\n    \"last_name\": \"Morales\",\r\n    \"profile_pic\": \"https://avatars.githubusercontent.com/u/128872810?v=4\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+			"name": "GET",
+			"item": [
+				{
+					"name": "GET Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users"
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "localhost:8000/api/users",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"users"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "STORE Posts/Blogs",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"title\": \"Titutlo\",\r\n    \"content\": \"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel magnam aspernatur ratione, animi repudiandae non consequatur dicta quis tempore, temporibus nulla, cum ullam veritatis iusto illo minima autem dignissimos optio.\",\r\n    \"category\": \"Spam\",\r\n    \"image_url\": \"https://avatars.githubusercontent.com/u/128872810?v=4\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+				{
+					"name": "GET Posts/Blogs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/blogs",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"blogs"
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "localhost:8000/api/blogs",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"blogs"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "STORE Comments",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"content\": \"Lorem ipsum dolor sit amet consectetur adipisicing elit.\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+				{
+					"name": "GET Comments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/comments",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comments"
+							]
 						}
-					}
-				},
-				"url": {
-					"raw": "localhost:8000/api/comments",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"comments"
-					]
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "UPDATE Users",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"username\": \"Rurik\",\r\n    \"email\": \"rurik@hotmail.com\",\r\n    \"password\": \"YaMeAcorde3210\",\r\n    \"first_name\": \"Rodrigo\",\r\n    \"last_name\": \"Morales\",\r\n    \"profile_pic\": \"https://avatars.githubusercontent.com/u/128872810?v=4\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:8000/api/users/1",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"users",
-						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "UPDATE Posts/Blogs",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"title\": \"TitutloUPDATED\",\r\n    \"content\": \"UPDATEDLorem ipsum dolor UPDATED sit amet consectetur adipisicing elit. Vel magnam aspernatur ratione, animi repudiandae non consequatur dicta quis tempore, temporibus nulla, cum ullam veritatis iusto illo minima autem dignissimos optio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel magnam aspernatur ratione, animi repudiandae non consequatur dicta quis tempore, temporibus nulla, cum ullam veritatis iusto illo minima autem dignissimos optio. UPDATED\",\r\n    \"category\": \"Spam\",\r\n    \"image_url\": \"https://avatars.githubusercontent.com/u/128872810?v=4\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:8000/api/blogs/1",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"blogs",
-						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "UPDATE Comments",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"content\": \"UPDATED Lorem ipsum dolor UPDATED\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:8000/api/comments/1",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"comments",
-						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "DESTROY Users",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:8000/api/users/1",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"users",
-						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "DESTROY Post/Blogs",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:8000/api/blogs/1",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"blogs",
-						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "DESTROY Comments",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:8000/api/comments/1",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"comments",
-						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "SHOW User Posts/Blogs",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "localhost:8000/api/user-blogs",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"user-blogs"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "SHOW Post/Blog Comments",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "localhost:8000/api/blog-comments",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"blog-comments"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "SHOW User Comments",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "localhost:8000/api/user-comments",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"user-comments"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "CREATE User",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "username",
-							"value": "Rurik",
-							"type": "text"
+			"name": "POST",
+			"item": [
+				{
+					"name": "STORE Users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"rrurrik\",\r\n    \"email\": \"rurik@hotmail.com\",\r\n    \"password\": \"NoMeAcuerdo3210\",\r\n    \"first_name\": \"Rodrigo\",\r\n    \"last_name\": \"Morales\",\r\n    \"profile_pic\": \"https://avatars.githubusercontent.com/u/128872810?v=4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
-						{
-							"key": "email",
-							"value": "r@r.com",
-							"type": "text"
-						},
-						{
-							"key": "password",
-							"value": "asd1234",
-							"type": "text"
-						},
-						{
-							"key": "first_name",
-							"value": "Rodrigo",
-							"type": "text"
-						},
-						{
-							"key": "last_name",
-							"value": "Morales",
-							"type": "text"
+						"url": {
+							"raw": "localhost:8000/api/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users"
+							]
 						}
-					]
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "localhost:8000/api/auth/register",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"auth",
-						"register"
-					]
+				{
+					"name": "STORE Posts/Blogs",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Titutlo\",\r\n    \"content\": \"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel magnam aspernatur ratione, animi repudiandae non consequatur dicta quis tempore, temporibus nulla, cum ullam veritatis iusto illo minima autem dignissimos optio.\",\r\n    \"category\": \"Spam\",\r\n    \"image_url\": \"https://avatars.githubusercontent.com/u/128872810?v=4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/blogs",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"blogs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "STORE Comments",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\": \"Lorem ipsum dolor sit amet consectetur adipisicing elit.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/comments",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comments"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "LOGIN User",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "username",
-							"value": "Rurik",
-							"type": "text"
+			"name": "PUT",
+			"item": [
+				{
+					"name": "UPDATE Users",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Rurik\",\r\n    \"email\": \"rurik@hotmail.com\",\r\n    \"password\": \"YaMeAcorde3210\",\r\n    \"first_name\": \"Rodrigo\",\r\n    \"last_name\": \"Morales\",\r\n    \"profile_pic\": \"https://avatars.githubusercontent.com/u/128872810?v=4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
-						{
-							"key": "email",
-							"value": "r@r.com",
-							"type": "text"
-						},
-						{
-							"key": "password",
-							"value": "asd1234",
-							"type": "text"
-						},
-						{
-							"key": "first_name",
-							"value": "Rodrigo",
-							"type": "text"
-						},
-						{
-							"key": "last_name",
-							"value": "Morales",
-							"type": "text"
+						"url": {
+							"raw": "localhost:8000/api/users/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"1"
+							]
 						}
-					]
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "localhost:8000/api/auth/register",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"auth",
-						"register"
-					]
+				{
+					"name": "UPDATE Posts/Blogs",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"TitutloUPDATED\",\r\n    \"content\": \"UPDATEDLorem ipsum dolor UPDATED sit amet consectetur adipisicing elit. Vel magnam aspernatur ratione, animi repudiandae non consequatur dicta quis tempore, temporibus nulla, cum ullam veritatis iusto illo minima autem dignissimos optio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel magnam aspernatur ratione, animi repudiandae non consequatur dicta quis tempore, temporibus nulla, cum ullam veritatis iusto illo minima autem dignissimos optio. UPDATED\",\r\n    \"category\": \"Spam\",\r\n    \"image_url\": \"https://avatars.githubusercontent.com/u/128872810?v=4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/blogs/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"blogs",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE Comments",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\": \"UPDATED Lorem ipsum dolor UPDATED\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/comments/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comments",
+								"1"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
+		},
+		{
+			"name": "DEL",
+			"item": [
+				{
+					"name": "DESTROY Users",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/users/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DESTROY Post/Blogs",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/blogs/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"blogs",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DESTROY Comments",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/comments/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comments",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SHOW",
+			"item": [
+				{
+					"name": "SHOW Users Posts/Blogs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/user-blogs",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user-blogs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SHOW User Posts/Blogs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/user-blogs",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user-blogs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SHOW all Posts/Blogs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/blogs",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"blogs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SHOW Post/Blog Comments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/blog-comments",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"blog-comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SHOW Users Comments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/user-comments",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user-comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SHOW User Comments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/user-comments",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user-comments"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reg/Log",
+			"item": [
+				{
+					"name": "CREATE User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "Rurik",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "r@r.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "asd1234",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "Rodrigo",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Morales",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LOGIN User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "Rurik",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "r@r.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "asd1234",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "Rodrigo",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Morales",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
