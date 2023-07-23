@@ -18,7 +18,6 @@ class Blog extends Model
         'image_url',
         'status',
         'user_id'
-
     ];
 
     public function userBlog() {
