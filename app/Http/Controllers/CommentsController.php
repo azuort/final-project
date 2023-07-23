@@ -36,7 +36,7 @@ class CommentsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function showAllComments() {
+    public function showAllComments($id) {
         $comments = Blog::with('commentBlog')->get();
         return $comments;
     }
@@ -44,6 +44,19 @@ class CommentsController extends Controller
     public function showAllUserComments() {
         $comments = User::with('commentUser')->get();
         return $comments;
+    }
+
+    public function showUserCommentsById($id) {
+        try {
+            $user = User::findOrFail($id);
+            $comments = $user->commentUser;
+            return $comments;
+        } catch (\Throwable $th) {
+            return response()->json([
+                'status' => false,
+                'message' => $th->getMessage()
+            ], 500);
+        }
     }
 
     /**

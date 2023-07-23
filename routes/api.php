@@ -33,10 +33,13 @@ Route::post('/blogs',[BlogController::class, 'store']);
 Route::put('/blogs/{id}',[BlogController::class, 'update']);
 Route::get('/user-blogs', [BlogController::class, 'showAll']);
 Route::delete('/blogs/{id}',[BlogController::class, 'destroy']);
+Route::get('/user-blogs/{id}',[BlogController::class, 'showUserBlogsById']);
+Route::get('/blogs/{id}',[BlogController::class, 'showBlogById']);
 
 Route::get('/comments',[CommentsController::class, 'index']);
 Route::post('/comments',[CommentsController::class, 'store']);
 Route::put('/comments/{id}',[CommentsController::class, 'update']);
 Route::get('/blog-comments',[CommentsController::class, 'showAllComments']);
 Route::get('/user-comments',[CommentsController::class, 'showAllUserComments']);
+Route::get('/user-comments/{id}',[CommentsController::class, 'showUserCommentsById']);
 Route::delete('/comments/{id}',[CommentsController::class, 'destroy']);
