@@ -5,7 +5,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CommentsController;
-use App\Models\Comment;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +25,8 @@ Route::get('/users',[UsersController::class, 'index']);
 Route::post('/users',[UsersController::class, 'store']);
 Route::put('/users/{id}',[UsersController::class, 'update']);
 Route::delete('/users/{id}',[UsersController::class, 'destroy']);
+Route::post('/auth/register', [UsersController::class, 'createUser']);
+Route::post('/auth/login', [UsersController::class, 'loginUser']);
 
 Route::get('/blogs',[BlogController::class, 'index']);
 Route::post('/blogs',[BlogController::class, 'store']);
