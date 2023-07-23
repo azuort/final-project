@@ -7,6 +7,10 @@
 	},
 	"item": [
 		{
+			"name": "New Folder",
+			"item": []
+		},
+		{
 			"name": "GET Users",
 			"request": {
 				"method": "GET",
@@ -373,6 +377,106 @@
 					"path": [
 						"api",
 						"user-comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "Rurik",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "r@r.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "asd1234",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "Rodrigo",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Morales",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/auth/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "Rurik",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "r@r.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "asd1234",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "Rodrigo",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Morales",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/auth/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"register"
 					]
 				}
 			},
