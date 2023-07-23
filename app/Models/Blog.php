@@ -13,8 +13,12 @@ class Blog extends Model
         'title',
         'content',
         'category',
+        'b_created_at',
+        'b_updated_at',
         'image_url',
-        'status'
+        'status',
+        'user_id'
+
     ];
 
     public function userBlog() {
