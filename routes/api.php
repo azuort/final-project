@@ -5,7 +5,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CommentsController;
-use App\Models\Comment;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,16 +25,21 @@ Route::get('/users',[UsersController::class, 'index']);
 Route::post('/users',[UsersController::class, 'store']);
 Route::put('/users/{id}',[UsersController::class, 'update']);
 Route::delete('/users/{id}',[UsersController::class, 'destroy']);
+Route::post('/auth/register', [UsersController::class, 'createUser']);
+Route::post('/auth/login', [UsersController::class, 'loginUser']);
 
 Route::get('/blogs',[BlogController::class, 'index']);
 Route::post('/blogs',[BlogController::class, 'store']);
 Route::put('/blogs/{id}',[BlogController::class, 'update']);
 Route::get('/user-blogs', [BlogController::class, 'showAll']);
 Route::delete('/blogs/{id}',[BlogController::class, 'destroy']);
+Route::get('/user-blogs/{id}',[BlogController::class, 'showUserBlogsById']);
+Route::get('/blogs/{id}',[BlogController::class, 'showBlogById']);
 
 Route::get('/comments',[CommentsController::class, 'index']);
 Route::post('/comments',[CommentsController::class, 'store']);
 Route::put('/comments/{id}',[CommentsController::class, 'update']);
 Route::get('/blog-comments',[CommentsController::class, 'showAllComments']);
 Route::get('/user-comments',[CommentsController::class, 'showAllUserComments']);
+Route::get('/user-comments/{id}',[CommentsController::class, 'showUserCommentsById']);
 Route::delete('/comments/{id}',[CommentsController::class, 'destroy']);
