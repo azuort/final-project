@@ -66,4 +66,29 @@ class BlogController extends Controller
         $blog->save();
         return redirect('');
     }
+
+    public function showUserBlogsById($id) {
+        try {
+            $user = User::findOrFail($id);
+            $blogs = $user->blog;
+            return $blogs;
+        } catch (\Throwable $th) {
+            return response()->json([
+                'status' => false,
+                'message' => $th->getMessage()
+            ], 500);
+        }
+    }
+
+    public function showBlogById($id) {
+        try {
+            $blog = Blog::with('commentBlog')->findOrFail($id);
+            return $blog;
+        } catch (\Throwable $th) {
+            return response()->json([
+                'status' => false,
+                'message' => $th->getMessage()
+            ], 500);
+        }
+    }
 }
