@@ -4,7 +4,19 @@ import {useLoaderData} from 'react-router-dom'
 const AllBlogs = () => {
   const {posts} = useLoaderData()
   console.log(posts)
-  return "Blog";
+  return (
+    <>
+    {posts.length> 0 ?(
+      posts.map((blog)=>(
+        <div key={blog.id}>
+          <h2>{blog.title}</h2>
+        </div>
+      ))
+    ):(
+      <p>No se encontraron Blogs</p>
+    )}
+    </>
+  );
 };
 
 export default AllBlogs;
