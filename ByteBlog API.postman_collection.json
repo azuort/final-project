@@ -345,6 +345,14 @@
 			"name": "SHOW",
 			"item": [
 				{
+					"name": "SHOW User",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
 					"name": "SHOW Users Posts/Blogs",
 					"request": {
 						"method": "GET",
